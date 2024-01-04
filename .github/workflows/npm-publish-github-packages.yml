@@ -15,9 +15,32 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
+          cache:'npm'
+      - run: npm install
+      - run: npm run build
       - run: npm test
-
+      - run: ls -a
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 检查 main 分支
+    uses: actions/checkout@v3
+    - name: 初始化缓存
+      uses: actions/cache@v3
+      id: cache-dependencies
+      with:
+          path: node_modules
+          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+    - name: 安装 Node.js
+      uses: actions/setup-node@v3
+      - run: npm install
+      - run: npm run build
+    - name: 发布 NPM 包
+      run: | 
+        npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+        npm publish
+      env:
+        NPM_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
