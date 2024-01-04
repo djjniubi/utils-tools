@@ -3,9 +3,9 @@
  * @Date: 2023-12-21 09:40:14
  * @FilePath: \utils-tools\src\_text_\index.test.ts
  * @LastEditors: djj
- * @LastEditTime: 2023-12-25 09:40:16
+ * @LastEditTime: 2024-01-04 15:12:48
  */
-import {intervalValue} from "../index";
+import {intervalValue,timeFormat} from "../index";
 describe("intervalValue",()=>{
    const data:any=[{code:30,color:"red"},{code:60,color:"black"},{code:80,color:"green"}];
    const arr:any=[30,80,60];
@@ -40,4 +40,20 @@ describe("intervalValue",()=>{
       const result =intervalValue(data2,{text:"code",value:"color"},25);
       expect(result).toBe(data2);
     })
+})
+
+describe("timeFormat",()=>{
+  const date="2024-1-04 15:01:00";
+  it("测试时间格式1",()=>{
+    const data=timeFormat(date,"yyyy-mm-dd");
+    expect(data).toBe("2024-01-04")
+  });
+  it("测试时间格式2",()=>{
+    const data=timeFormat(date);
+    expect(data).toBe("2024-01-04 15:01:00")
+  });
+  it("测试时间格式3",()=>{
+    const data=timeFormat(date,"yyyy/mm/dd hh:MM:ss");
+    expect(data).toBe("2024/01/04 15:01:00")
+  })
 })
