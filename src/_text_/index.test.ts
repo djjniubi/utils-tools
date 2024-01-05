@@ -3,9 +3,9 @@
  * @Date: 2023-12-21 09:40:14
  * @FilePath: \utils-tools\src\_text_\index.test.ts
  * @LastEditors: djj
- * @LastEditTime: 2024-01-04 15:12:48
+ * @LastEditTime: 2024-01-05 17:09:30
  */
-import {intervalValue,timeFormat} from "../index";
+import {intervalValue,timeFormat,formatPast} from "../index";
 describe("intervalValue",()=>{
    const data:any=[{code:30,color:"red"},{code:60,color:"black"},{code:80,color:"green"}];
    const arr:any=[30,80,60];
@@ -56,4 +56,17 @@ describe("timeFormat",()=>{
     const data=timeFormat(date,"yyyy/mm/dd hh:MM:ss");
     expect(data).toBe("2024/01/04 15:01:00")
   })
+})
+
+describe("formatPast",()=>{
+  const date="2024-01-04 06:00:00";
+  it("时间转换1",()=>{
+    const data=formatPast(new Date(date));
+    expect(data).toBe("1天前")
+  });
+  it("时间转换2",()=>{
+    const data=formatPast(new Date());
+    expect(data).toBe("刚刚")
+  });
+ 
 })
