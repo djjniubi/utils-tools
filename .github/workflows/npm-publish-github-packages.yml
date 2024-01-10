@@ -4,6 +4,9 @@
 name: Node.js Package
 
 on:
+  push:
+    branches:
+    - djjniubi-test
   release:
     types: [created]
 
