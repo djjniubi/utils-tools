@@ -3,7 +3,7 @@
  * @Date: 2023-12-15 11:52:18
  * @FilePath: \utils-tools\src\index.ts
  * @LastEditors: djj
- * @LastEditTime: 2024-01-05 16:55:16
+ * @LastEditTime: 2024-01-10 17:49:59
  */
 import debounce from "./modules/debounce";
 import throttle from "./modules/throttle";
@@ -15,4 +15,6 @@ export  {
     intervalValue,
     timeFormat,
     formatPast
+
+    
 }
