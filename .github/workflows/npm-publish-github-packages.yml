@@ -29,8 +29,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
+          registry-url: https://registry.npmjs.org
+      - name: Install pnpm
+        run: npm install -g pnpm@8.6.11
+      - name: Installing Dependencies
+        run: pnpm install
+      - name: Running Build
+        run: pnpm run build
+      - name: Running Test
+        run: pnpm run test
+      - name: Running Publish
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.UTILS_TOOLS_TOKEN}}
