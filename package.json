@@ -1,11 +1,12 @@
 {
-  "name": "utils-tools",
-  "version": "1.0.0",
+  "name": "utils-tools-djj",
+  "version": "0.0.1",
   "description": "个人工具库",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "jsnext:main": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "publisher": "djjniubi",
   "files": [
     "lib"
   ],
