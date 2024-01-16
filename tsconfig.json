@@ -12,7 +12,7 @@
 
     /* Language and Environment */
     "target": "ES5",                                  /* 设置生成的JavaScript的语言版本，并包含兼容的库声明。*/
-    "lib": ["ESNext", "DOM", "ES2018"],                                        /* 指定一组描述目标运行时环境的打包库声明文件。 */
+    "lib": ["ESNext", "DOM", "ES2018"],                  /* 指定一组描述目标运行时环境的打包库声明文件。 */
     // "jsx": "preserve",                                /* 指定生成的JSX代码。 */
     // "experimentalDecorators": true,                   /* 启用TC39第二阶段草案装饰器的实验性支持。 */
     // "emitDecoratorMetadata": true,                    /* 发送装饰器声明的设计类型元数据。 */
