@@ -3,7 +3,7 @@
  * @Date: 2023-12-18 10:49:31
  * @FilePath: \utils-tools\src\modules\throttle.ts
  * @LastEditors: djj
- * @LastEditTime: 2024-01-16 15:26:21
+ * @LastEditTime: 2024-01-16 17:33:30
  */
 let timer;
 let flag:boolean;
@@ -20,6 +20,8 @@ let flag:boolean;
         },wait)
     }
 }
+
+
 
 export default throttle
 
