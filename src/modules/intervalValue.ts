@@ -54,7 +54,7 @@ export const intervalValue=(arr:[any],obj:object={},price:number|null=null)=>{
             matrix.push(sortedCopy.slice(i, i + 2))
         };
        
-        if(!price){
+        if(!price&&price!=0){
             return matrix  
         }
         for(let i=0;i<matrix.length;i++){

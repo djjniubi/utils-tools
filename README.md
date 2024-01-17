@@ -35,3 +35,13 @@
 | dataFlattening |    [arr,string]     |   扁平化数组，第二个参数默认是children，可根据字段名称传值   | 例：dataFlattening([{text:"aa",children:[{text:"bb",children:[{text:"cc"}]}]}])；                       返回值是[{text:"aa",children:[...]},{text:"bb",children:[...]},{text:"cc",children:[]}] |
 |   splitData    |    [arr,number]     |               给定一个数组，对数组进行数据分组               | 例：splitData([20,30,40,50,60],2);返回值[[20,30],[40,50],[60]] |
 
+#### 
+
+
+
+#### 其他的方法
+
+|       方法       |   参数   |       描述       |                            返回值                            |
+| :--------------: | :------: | :--------------: | :----------------------------------------------------------: |
+| digitalToChinese | [number] | 将数字转换成中文 | 例：digitalToChinese(110500000.06)；返回值：一亿一千零五十万点零六 |
+
