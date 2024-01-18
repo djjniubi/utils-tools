@@ -3,7 +3,7 @@
  * @Date: 2024-01-17 15:07:09
  * @FilePath: \utils-tools\src\modules\digitalToChinese.ts
  * @LastEditors: djj
- * @LastEditTime: 2024-01-17 15:23:24
+ * @LastEditTime: 2024-01-18 10:17:32
  */
 /** 数字转中文
  * @param {Number} 数值
@@ -51,3 +51,26 @@ export function digitalToChinese(num:number):string{
     }
     return _handleZero(result)
     }
+
+export function toBigChine(num:number){
+    const cnum=digitalToChinese(num);
+    const map:any={
+        零:"零",
+        一:"壹",
+        二:"贰",
+        三:"叁",
+        四:"肆",
+        五:"伍",
+        六:"陆",
+        七:"柒",
+        八:"捌",
+        九:"玖",
+        十:"拾",
+        百:"佰",
+        千:"仟",
+        万:"万",
+        亿:"亿",
+        点:"点"
+    }
+    return cnum.split("").map((c)=>map[c]).join("")
+}
