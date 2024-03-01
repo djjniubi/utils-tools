@@ -1,6 +1,6 @@
 {
   "name": "utils-tools-djj",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "个人工具库",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
